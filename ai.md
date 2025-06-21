@@ -29,7 +29,7 @@ Community projects can ask for funding, which we implement as a dummy for now. W
 
 Users can be persons or organizations. Persons may be part of an Organisation. Users have a personal profile page and they can:
 
-- Follow/favorite requirements and items
+- Follow/favorite requirements, items and users
 
 Make the web app full features including login system and basic error display in case of app errors. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
@@ -59,8 +59,9 @@ Data files:
     location:             
 
     memberIds:            if person: array of org ids, if org: array member ids
-    itemsFollowing:       Array of item IDs the user follows
-    reqFollowing:         Array of requirement IDs the user follows
+    followedItems:        Array of item IDs
+    followedReq:          Array of requirement IDs
+    followedUsers:        Array of user IDs
     itemScore:            Array of items up- or downvoted like [{id: ID, score: 1|-1}, ...]
     reqScore:             Array of requirements up- or downvoted
 
