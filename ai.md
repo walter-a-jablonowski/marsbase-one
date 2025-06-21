@@ -28,8 +28,8 @@ We use PHP with simple classes and put all data in the /data folder (no database
 /data
   /users
 
+    id:                   email is used as id for users
     type:                 "person" or "organization"
-    email:                is used as id
     password:             Hashed password
     name:                 Full name or organization name
     memberIds:            if person: array of org ids, if org: array member ids
