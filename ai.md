@@ -84,6 +84,3 @@ We use PHP with simple classes and put all data in the /data folder (no database
     createdBy:           User ID of creator
     modifiedAt:          YYYY-MM-DD HH:MM:SS
 ```
-
-fields
-nav
