@@ -49,7 +49,7 @@ We use config.yml, simple PHP code with simple classes and put all data in the /
     status:               "proposed", "validated"
     description:          Short description
     detailed:             Longer explanation
-    relatedIDs:           Array of related requirement IDs
+    relatedIDs:           Array of related requirement IDs (e.g. dependencies)
     itemIDs:              Array of item IDs that fulfill this requirement
     score:                Calculated from up/downvotes
     createdBy:            User ID of creator
