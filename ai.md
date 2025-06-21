@@ -15,8 +15,9 @@ Pages:
       - show most important requirement information (including image)
       - enables navigate to list of sub requirements
       - also enables to go to the requirement page of where all information is visible as well as the items for this requirement are listed
-- People
-  - list of people showing their expertise for mars
+- People: show your expertise for mars
+  - filter and sorting controls, including people or organisation only
+  - list of organisations and people (mixed)
 - we use no seperate items page
 - Profile
 - Settings (currently empty)
