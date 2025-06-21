@@ -17,7 +17,7 @@
             <label for="filter-type" class="form-label">Account Type</label>
             <select class="form-select" id="filter-type">
               <option value="all">All</option>
-              <option value="individual">Individuals</option>
+              <option value="person">Individuals</option>
               <option value="organization">Organizations</option>
             </select>
           </div>
@@ -56,7 +56,7 @@
           <?php if( !empty($users) ): ?>
             <div class="row" id="users-container">
               <?php foreach( $users as $u ): ?>
-                <div class="col-md-6 mb-4 user-card" data-type="<?= $u['accountType'] ?>">
+                <div class="col-md-6 mb-4 user-card" data-type="<?= $u['type'] ?? 'person' ?>">
                   <div class="card h-100">
                     <div class="card-body">
                       <div class="d-flex">
@@ -71,13 +71,13 @@
                         <div>
                           <h5 class="card-title mb-1"><?= $u['name'] ?></h5>
                           <p class="text-muted small mb-2">
-                            <?= $u['accountType'] === 'organization' ? 'Organization' : 'Individual' ?>
+                            <?= isset($u['type']) && $u['type'] === 'organization' ? 'Organization' : 'Individual' ?>
                             <?php if( !empty($u['location']) ): ?>
                               • <?= $u['location'] ?>
                             <?php endif; ?>
                           </p>
                           
-                          <?php if( $isLoggedIn && $user['id'] !== $u['id'] ): ?>
+                          <?php if( $isLoggedIn && isset($user['id']) && isset($u['id']) && $user['id'] !== $u['id'] ): ?>
                             <button class="btn btn-sm <?= in_array($u['id'], $user['usersFollowing'] ?? []) ? 'btn-mars' : 'btn-outline-mars' ?> follow-btn" 
                                     data-id="<?= $u['id'] ?>" 
                                     data-type="user" 
