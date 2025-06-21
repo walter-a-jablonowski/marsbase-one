@@ -73,13 +73,10 @@ We use PHP with simple classes and put all data in the /data folder (no database
     mass:                Mass in kg
     volume:              Volume in cubic meters
     shape
-    powerRequirement:    Power needed in watts
-    maintenance:         maintenance requirements (time, duration)
-    lifespan:            Expected lifespan
 
     fundingGoal:         Amount of funding needed
-    currentFunding:      Current amount raised
-    contributors:        Array of user IDs who contribute
+    contributions:       Array of user who contribute like [{user: USER_ID, time: TIME, amount: AMOUNT}, ...]
+    currentFunding:      Calculated from contributions
     volunteerRoles:      Types of volunteers needed
 
     createdBy:           User ID of creator
