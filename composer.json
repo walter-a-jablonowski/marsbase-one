@@ -1,0 +1,14 @@
+{
+  "name": "marsbase/marsbase-one",
+  "description": "Mars Colony Web Application",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "symfony/yaml": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Marsbase\\": "src/"
+    }
+  }
+}

@@ -15,7 +15,7 @@ Make the web app full features including login system and basic error display in
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
-File names for files in data folders:
+We use speacking File names for all files in data folders, e.g. for users:
 
 - derive it from the field "name"
 - convert each word to first character uppercase

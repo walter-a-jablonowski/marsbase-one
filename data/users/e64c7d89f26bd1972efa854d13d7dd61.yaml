@@ -1,0 +1,18 @@
+id: e64c7d89f26bd1972efa854d13d7dd61
+email: admin@example.com
+type: person
+password: $2y$10$F71q0d3gA314J/2MCKTJRu6CpDcZIEQw36NpNCNf7jJ9c6fjZyUJq
+name: Admin
+memberIds: {  }
+image: ''
+bio: 'System Administrator'
+expertise: 'System Administration'
+location: 'Mars Colony HQ'
+website: ''
+socialUrl: ''
+itemsFollowing: {  }
+requirementsFollowing: {  }
+usersFollowing: {  }
+itemScore: {  }
+reqScore: {  }
+modifiedAt: 1750529500
