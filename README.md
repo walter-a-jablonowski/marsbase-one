@@ -4,17 +4,17 @@
 
 MarsBase.One is a community-driven platform for planning and developing the first sustainable human colony on Mars. The application allows users to:
 
-- Propose and vote on requirements for Mars colonization
+- Propose requirements for Mars colonization
 - Submit solutions (items) that fulfill these requirements
-- Follow interesting requirements, items, and other users
+- Follow interesting requirements and items
 - Contribute to community projects through a funding system
 
 ## Features
 
 - Hierarchical requirement management
-- User voting system for prioritizing requirements and solutions
+- Score system for prioritizing requirements and solutions
 - User profiles for individuals and organizations
-- Follow/favorite system for requirements, items, and users
+- Follow/favorite system for requirements, items
 - Community funding for proposed solutions
 
 ## Getting Started
@@ -33,5 +33,5 @@ MarsBase.One is a community-driven platform for planning and developing the firs
 
 ### Default Admin Login
 
-- Email: admin@ecample.com
+- Email: admin@example.com
 - Password: superadmin
