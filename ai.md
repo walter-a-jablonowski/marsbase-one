@@ -37,7 +37,8 @@ We use PHP with simple classes and put all data in the /data folder (no database
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
     location:             Current location (Earth/Mars)
-    following:            Array of requirement/item IDs the user follows
+    itemsFollowing:       Array of item IDs the user follows
+    reqFollowing:         Array of requirement IDs the user follows
     itemScore:            Array of items up- or downvoted like [{ID: 1|-1}, ...]
     reqScore:             Array of requirements up- or downvoted
     modifiedAt:           YYYY-MM-DD HH:MM:SS
