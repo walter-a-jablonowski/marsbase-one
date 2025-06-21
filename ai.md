@@ -38,7 +38,8 @@ We use PHP with simple classes and put all data in the /data folder (no database
     expertise:            Areas of expertise/skills
     location:             Current location (Earth/Mars)
     following:            Array of requirement/item IDs the user follows
-    upvoted:              Array of item/requirement IDs upvoted
+    itemScore:            Array of items up- or downvoted like [{ID: 1|-1}, ...]
+    reqScore:             Array of requirements up- or downvoted
     downvoted:            Array of item/requirement IDs downvoted
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
@@ -53,7 +54,7 @@ We use PHP with simple classes and put all data in the /data folder (no database
     detailed:             Longer explanation
     relatedIDs:           Array of related requirement IDs
     itemIDs:              Array of item IDs that fulfill this requirement
-    userRating:           Calculated from up/downvotes
+    score:                Calculated from up/downvotes
     createdBy:            User ID of creator
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
@@ -68,7 +69,7 @@ We use PHP with simple classes and put all data in the /data folder (no database
     primaryImage
     images:              Array of image URLs
 
-    userRating:          Calculated from up/downvotes
+    score:               Calculated from up/downvotes
 
     mass:                Mass in kg
     volume:              Volume in cubic meters
@@ -86,5 +87,22 @@ We use PHP with simple classes and put all data in the /data folder (no database
     modifiedAt:          YYYY-MM-DD HH:MM:SS
 ```
 
+  # Additional collections
+  /votes
+    id:                  Auto-generated
+    userId:              ID of the user who voted
+    entityType:          "requirement" or "item"
+    entityId:            ID of the voted entity
+    voteType:            "up" or "down"
+    modifiedAt:          YYYY-MM-DD HH:MM:SS
+
+  /comments
+    id:                  Auto-generated
+    userId:              ID of the user who commented
+    entityType:          "requirement" or "item"
+    entityId:            ID of the commented entity
+    content:             Comment text
+    modifiedAt:          YYYY-MM-DD HH:MM:SS
+    
 fields
 nav
