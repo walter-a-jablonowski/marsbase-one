@@ -33,7 +33,7 @@ We use PHP with simple classes and put all data in the /data folder (no database
     password:             Hashed password
     name:                 Full name or organization name
     memberIds:            if person: array of org ids, if org: array member ids
-    profileImage
+    image:                uploaded file (gets some hash as file name on upload)
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
     location:             Current location (Earth/Mars)
@@ -48,7 +48,8 @@ We use PHP with simple classes and put all data in the /data folder (no database
     id                    derive from name
     childIds:             IDs of child requirements (for hierarchy)
     name
-    images:               Array of image URLs
+    primaryImage:         uploaded file (gets some hash as name on upload)
+    images:               Array of image hashes
     status:               "proposed", "validated"
     description:          Short description
     detailed:             Longer explanation
@@ -66,8 +67,8 @@ We use PHP with simple classes and put all data in the /data folder (no database
     description:         Short description
     projectLead:         User ID of project lead
     availabilityDate:    Expected availability (percentage or specific date)
-    primaryImage
-    images:              Array of image URLs
+    primaryImage:        uploaded file (gets some hash as name on upload)
+    images:              Array of image hashes
 
     score:               Calculated from up/downvotes
 
