@@ -24,7 +24,39 @@ We use PHP with simple classes and put all data in the /data folder (no database
 /data
   /users of type "organization" or "person" (person may have orgId)
 
+    id
+    type:                 "person" or "organization"
+    orgId:                ID of organization (only for persons)
+    email
+    password:             Hashed password
+    name:                 Full name or organization name
+    profileImage
+    bio:                  Short biography or description
+    location:             Current location (Earth/Mars)
+    expertise:            Areas of expertise/skills
+    following:            Array of requirement/item IDs the user follows
+    comments:             Array of comment IDs made by the user
+    upvoted:              Array of item/requirement IDs upvoted
+    downvoted:            Array of item/requirement IDs downvoted
+    createdAt:            Account creation timestamp
+
   /requirements (hierarchical)
+
+    id
+    parentId:             ID of parent requirement (for hierarchy)
+    name
+    images:               Array of reference images
+    status:               "proposed", "validated", "fulfilled", etc.
+    description:          Short description
+    detailedDescription:  Longer explanation
+    relatedRequirements:  Array of related requirement IDs
+    fulfillingItems:      Array of item IDs that fulfill this requirement
+    userRating:           Calculated from up/downvotes
+    upvotes:              Number of upvotes
+    downvotes:            Number of downvotes
+    createdBy:            User ID of creator
+    createdAt:            Creation timestamp
+
   /items of type "good", "community-project"
 
     id
