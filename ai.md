@@ -28,11 +28,11 @@ We use PHP with simple classes and put all data in the /data folder (no database
 /data
   /users
 
-    email:                is used as id
     type:                 "person" or "organization"
-    orgIds:               Array of org ids of a person
+    email:                is used as id
     password:             Hashed password
     name:                 Full name or organization name
+    memberIds:            if person: array of org ids, if org: array member ids
     profileImage
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
@@ -50,27 +50,25 @@ We use PHP with simple classes and put all data in the /data folder (no database
     images:               Array of image URLs
     status:               "proposed", "validated"
     description:          Short description
-    detailedDescription:  Longer explanation
-    relatedRequirements:  Array of related requirement IDs
-    fulfillingItems:      Array of item IDs that fulfill this requirement
+    detailed:             Longer explanation
+    relatedIDs:           Array of related requirement IDs
+    itemIDs:              Array of item IDs that fulfill this requirement
     userRating:           Calculated from up/downvotes
     createdBy:            User ID of creator
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
-  /items of type "good", "community-project"
+  /items
 
     id                   derive from name
+    requirementIds:      Array of requirement IDs that this item fulfills
     name
     description:         Short description
     projectLead:         User ID of project lead
+    availabilityDate:    Expected availability (percentage or specific date)
     primaryImage
     images:              Array of image URLs
 
-    dependencies:        personnel/goods needed
-    tags:                Array of category tags
-
-    userRating
-    availabilityDate:    Expected availability (percentage or specific date)
+    userRating:          Calculated from up/downvotes
 
     mass:                Mass in kg
     volume:              Volume in cubic meters
