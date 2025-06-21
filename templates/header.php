@@ -38,7 +38,7 @@
             <a class="nav-link" href="index.php?page=community">Community</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=users&action=list">Users</a>
+            <a class="nav-link" href="index.php?page=users&action=index">Users</a>
           </li>
         </ul>
         
