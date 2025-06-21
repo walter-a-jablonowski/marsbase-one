@@ -3,6 +3,19 @@ I am thinking about making a web project that helps Elon to build his Mars Colon
 
 I'd like to make a full features web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add solutions ("items") that fulfill the requirement.
 
+Pages:
+
+- Start
+- Login
+- Register
+- Requirements
+  - show a list of main requirements, on click navigate to sub requirements
+  - enable to go to a requirement page as well where the items for this requirement are listed
+- we use no seperate items page
+- Profile
+- Settings (currently empty)
+- Logout
+
 For the requirements as well as the items users can Up- or downvode (users may change) which is used for sorting. Also add basic filter and search functions.
 
 Community projects can ask for funding, which we implement as a dummy for now. We will add a payment feature later.
