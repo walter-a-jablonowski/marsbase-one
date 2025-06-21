@@ -9,8 +9,15 @@ Pages:
 - Login
 - Register
 - Requirements
-  - show a list of main requirements, on click navigate to sub requirements
-  - enable to go to a requirement page as well where the items for this requirement are listed
+  - left side: quick nav = hierarchical navigation of requirements for quick access
+  - right side, content area: list of requirement items, with:
+    - filter and sorting controls
+    - each list item:
+      - show most important requirement information (including image)
+      - enables navigate to list of sub requirements
+      - also enables to go to the requirement page of where all information is visible as well as the items for this requirement are listed
+- People
+  - list of people showing their expertise for mars
 - we use no seperate items page
 - Profile
 - Settings (currently empty)
