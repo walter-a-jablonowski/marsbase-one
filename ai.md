@@ -13,60 +13,59 @@ Community projects can ask for funding, which we implement as a dummy for now. W
 
 Users can be persons or organizations. Persons may be part of an Organisation. Users have a personal profile page and they can:
 
-- Comment
 - Follow/favorite requirements and items
 
 Make the web app full features including login system. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
 We use PHP with simple classes and put all data in the /data folder (no database):
 
+- ids: derive it from the field "name":
+  - convert each word to first character uppercase
+  - then remove all non alpha numeric chars
+  - add a short random string to the end
+
 ```
 /data
-  /users of type "organization" or "person" (person may have orgId)
+  /users
 
-    id
+    email:                is used as id
     type:                 "person" or "organization"
-    orgId:                ID of organization (only for persons)
-    email
+    orgIds:               Array of org ids of a person
     password:             Hashed password
     name:                 Full name or organization name
     profileImage
     bio:                  Short biography or description
-    location:             Current location (Earth/Mars)
     expertise:            Areas of expertise/skills
+    location:             Current location (Earth/Mars)
     following:            Array of requirement/item IDs the user follows
-    comments:             Array of comment IDs made by the user
     upvoted:              Array of item/requirement IDs upvoted
     downvoted:            Array of item/requirement IDs downvoted
-    createdAt:            Account creation timestamp
+    modifiedAt:           YYYY-MM-DD HH:MM:SS
 
   /requirements (hierarchical)
 
-    id
-    parentId:             ID of parent requirement (for hierarchy)
+    id                    derive from name
+    childIds:             IDs of child requirements (for hierarchy)
     name
-    images:               Array of reference images
-    status:               "proposed", "validated", "fulfilled", etc.
+    images:               Array of image URLs
+    status:               "proposed", "validated"
     description:          Short description
     detailedDescription:  Longer explanation
     relatedRequirements:  Array of related requirement IDs
     fulfillingItems:      Array of item IDs that fulfill this requirement
     userRating:           Calculated from up/downvotes
-    upvotes:              Number of upvotes
-    downvotes:            Number of downvotes
     createdBy:            User ID of creator
-    createdAt:            Creation timestamp
+    modifiedAt:           YYYY-MM-DD HH:MM:SS
 
   /items of type "good", "community-project"
 
-    id
+    id                   derive from name
     name
     description:         Short description
     projectLead:         User ID of project lead
     primaryImage
     images:              Array of image URLs
 
-    relatedRequirements: Array of requirement IDs this item fulfills
     dependencies:        personnel/goods needed
     tags:                Array of category tags
 
@@ -86,7 +85,7 @@ We use PHP with simple classes and put all data in the /data folder (no database
     volunteerRoles:      Types of volunteers needed
 
     createdBy:           User ID of creator
-    createdAt:           Creation timestamp
+    modifiedAt:          YYYY-MM-DD HH:MM:SS
 ```
 
 fields
