@@ -28,20 +28,20 @@ Data files:
 /data
   /users
 
-    id:                   numeric
+    id:                   numeric (use a json file sequence.json that has the last used ids)
     type:                 "person" or "organization"
     email:                email (unique)
     password:             Hashed password
     name:                 Full name or organization name
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
-    image:                uploaded file (gets some hash as file name on upload)
+    image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
     location:             
 
     memberIds:            if person: array of org ids, if org: array member ids
     itemsFollowing:       Array of item IDs the user follows
     reqFollowing:         Array of requirement IDs the user follows
-    itemScore:            Array of items up- or downvoted like [{ID: 1|-1}, ...]
+    itemScore:            Array of items up- or downvoted like [{id: ID, score: 1|-1}, ...]
     reqScore:             Array of requirements up- or downvoted
 
     modifiedAt:           YYYY-MM-DD HH:MM:SS
@@ -51,6 +51,7 @@ Data files:
     id                    numeric
     childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
     relatedIDs:           Array of related requirement IDs (e.g. dependencies)
+    userIDs:              Array of user IDs that may edit this requirement
     name
     status:               "proposed", "validated"
     description:          Short description
@@ -65,7 +66,7 @@ Data files:
     createdBy:            User ID of creator
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
-  /items
+  /items (only the creator may edit an item)
 
     id                   numeric
     requirementIds:      Array of requirement IDs that this item fulfills
@@ -83,7 +84,7 @@ Data files:
     shape
 
     fundingGoal:         Amount of funding needed
-    contributions:       Array of user who contribute like [{user: USER_ID, time: TIME, amount: AMOUNT}, ...]
+    contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
     currentFunding:      Calculated from contributions
     volunteerRoles:      Types of volunteers needed
 
