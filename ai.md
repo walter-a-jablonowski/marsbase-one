@@ -13,19 +13,24 @@ Users can be persons or organizations. Persons may be part of an Organisation. U
 
 Make the web app full features including login system. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
-We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database):
+We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
-- ids: derive it from the field "name":
-  - convert each word to first character uppercase
-  - then remove all non alpha numeric chars
-  - add a short random string to the end
+File names for files in data folders:
+
+- derive it from the field "name"
+- convert each word to first character uppercase
+- then remove all non alpha numeric chars
+- add a short random string to the end
+
+Data files:
 
 ```
 /data
   /users
 
-    id:                   email is used as id for users
+    id:                   numeric
     type:                 "person" or "organization"
+    email:                email (unique)
     password:             Hashed password
     name:                 Full name or organization name
     bio:                  Short biography or description
@@ -43,7 +48,7 @@ We use config.yml, simple PHP code with simple classes and put all data in the /
 
   /requirements (hierarchical)
 
-    id                    derive from name
+    id                    numeric
     childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
     relatedIDs:           Array of related requirement IDs (e.g. dependencies)
     name
@@ -62,7 +67,7 @@ We use config.yml, simple PHP code with simple classes and put all data in the /
 
   /items
 
-    id                   derive from name
+    id                   numeric
     requirementIds:      Array of requirement IDs that this item fulfills
     name
     description:         Short description
