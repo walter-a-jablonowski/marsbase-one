@@ -1,11 +1,7 @@
 
 I am thinking about making a web project that helps Elon to build his Mars Colony. Elon already is buillding a big rocket, which is the most important thing. But to be able to build a second (sustainable) civilation on Mars the mars colonists need much more stuff.
 
-I'd like to make a full features web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add different types of items (e.g. goods, community projects, etc.) that fulfill the requirement.
-
-- use typical data fields for each item type, but use ony the most important for now for simplicity
-- also include availability date
-- requirement also have data fields e.g. a list of related items (e.g. power → habitat)
+I'd like to make a full features web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add solutions ("items") that fulfill the requirement.
 
 For the requirements as well as the items users can Up- or downvode (users may change) which is used for sorting. Also add basic filter and search functions.
 
@@ -46,7 +42,7 @@ We use PHP with simple classes and put all data in the /data folder (no database
   /requirements (hierarchical)
 
     id                    derive from name
-    childIds:             IDs of child requirements (for hierarchy)
+    childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
     name
     primaryImage:         uploaded file (gets some hash as name on upload)
     images:               Array of image hashes
