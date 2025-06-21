@@ -40,7 +40,6 @@ We use PHP with simple classes and put all data in the /data folder (no database
     following:            Array of requirement/item IDs the user follows
     itemScore:            Array of items up- or downvoted like [{ID: 1|-1}, ...]
     reqScore:             Array of requirements up- or downvoted
-    downvoted:            Array of item/requirement IDs downvoted
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
   /requirements (hierarchical)
@@ -87,22 +86,5 @@ We use PHP with simple classes and put all data in the /data folder (no database
     modifiedAt:          YYYY-MM-DD HH:MM:SS
 ```
 
-  # Additional collections
-  /votes
-    id:                  Auto-generated
-    userId:              ID of the user who voted
-    entityType:          "requirement" or "item"
-    entityId:            ID of the voted entity
-    voteType:            "up" or "down"
-    modifiedAt:          YYYY-MM-DD HH:MM:SS
-
-  /comments
-    id:                  Auto-generated
-    userId:              ID of the user who commented
-    entityType:          "requirement" or "item"
-    entityId:            ID of the commented entity
-    content:             Comment text
-    modifiedAt:          YYYY-MM-DD HH:MM:SS
-    
 fields
 nav
