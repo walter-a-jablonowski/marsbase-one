@@ -6,6 +6,9 @@ I'd like to make a full features web app that is requirement based. In a hierarc
 Pages:
 
 - Start
+  - Texts
+  - Top Requirements
+  - Top Solutions
 - Login
 - Register
 - Requirements
