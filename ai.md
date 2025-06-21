@@ -9,8 +9,7 @@ Pages:
 - Login
 - Register
 - Requirements
-  - left side: quick nav = hierarchical navigation of requirements for quick access
-  - right side, content area: list of requirement items, with:
+  - list of requirement items, with:
     - filter and sorting controls
     - each list item:
       - show most important requirement information (including image)
