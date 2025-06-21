@@ -11,7 +11,7 @@ Users can be persons or organizations. Persons may be part of an Organisation. U
 
 - Follow/favorite requirements and items
 
-Make the web app full features including login system. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
+Make the web app full features including login system and basic error display in case of app errors. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
