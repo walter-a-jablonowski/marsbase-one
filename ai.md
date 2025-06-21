@@ -9,23 +9,36 @@ Pages:
 - Login
 - Register
 - Requirements
-  - list of requirement items, with:
-    - filter and sorting controls
-    - each list item:
-      - show most important requirement information (including image)
-      - enables navigate to list of sub requirements
-      - also enables to go to the requirement page of where all information is visible as well as the items for this requirement are listed
+  - requirements stat page: Main list of base requirement (use cards), each entry:
+    - show the most important requirement information (including image)
+    - buttons for all functions
+    - choose a nice layout
+  - click on an requirement to navigate to the requirement page
+  - requirement page:
+    - breadcrumb
+    - requirement name
+    - all information of this requirement (read only)
+    - buttons for all functions, for edit use modal
+    - tab control:
+      - first tab: "Sub Requirements"
+        - basic filter and sorting controls
+        - suggest solution button
+        - list of sub requirements
+      - second tab: "Solutions" (the items)
+        - basic filter and sorting controls
+        - suggest solution button
+        - list of items
 - People: show your expertise for mars
-  - filter and sorting controls, including people or organisation only
+  - basic filter and sorting controls, including show people or organisation only
   - list of organisations and people (mixed)
 - we use no seperate items page
 - Profile
 - Settings (currently empty)
 - Logout
 
-For the requirements as well as the items users can Up- or downvode (users may change) which is used for sorting. Also add basic filter and search functions.
+For the requirements as well as the items users can Up- or downvode (users may change their choice) which is used for initial sorting.
 
-Community projects can ask for funding, which we implement as a dummy for now. We will add a payment feature later.
+Items might be community projects (item type "project") and ask for funding, which we implement as a dummy UI for now. We will add a payment feature later.
 
 Users can be persons or organizations. Persons may be part of an Organisation. Users have a personal profile page and they can:
 
@@ -90,6 +103,7 @@ Data files:
   /items (only the creator may edit an item)
 
     id                   numeric
+    type:                "item", "service" or "project"
     requirementIds:      Array of requirement IDs that this item fulfills
     name
     description:         Short description
