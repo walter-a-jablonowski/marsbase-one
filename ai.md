@@ -28,30 +28,35 @@ We use config.yml, simple PHP code with simple classes and put all data in the /
     type:                 "person" or "organization"
     password:             Hashed password
     name:                 Full name or organization name
-    memberIds:            if person: array of org ids, if org: array member ids
-    image:                uploaded file (gets some hash as file name on upload)
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
-    location:             Current location (Earth/Mars)
+    image:                uploaded file (gets some hash as file name on upload)
+    location:             
+
+    memberIds:            if person: array of org ids, if org: array member ids
     itemsFollowing:       Array of item IDs the user follows
     reqFollowing:         Array of requirement IDs the user follows
     itemScore:            Array of items up- or downvoted like [{ID: 1|-1}, ...]
     reqScore:             Array of requirements up- or downvoted
+
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
   /requirements (hierarchical)
 
     id                    derive from name
     childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
+    relatedIDs:           Array of related requirement IDs (e.g. dependencies)
     name
-    primaryImage:         uploaded file (gets some hash as name on upload)
-    images:               Array of image hashes
     status:               "proposed", "validated"
     description:          Short description
     detailed:             Longer explanation
-    relatedIDs:           Array of related requirement IDs (e.g. dependencies)
+    primaryImage:         uploaded file (gets some hash as name on upload)
+    images:               Array of image hashes
+
     itemIDs:              Array of item IDs that fulfill this requirement
+
     score:                Calculated from up/downvotes
+
     createdBy:            User ID of creator
     modifiedAt:           YYYY-MM-DD HH:MM:SS
 
