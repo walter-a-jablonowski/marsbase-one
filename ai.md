@@ -13,7 +13,7 @@ Users can be persons or organizations. Persons may be part of an Organisation. U
 
 Make the web app full features including login system. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
-We use PHP with simple classes and put all data in the /data folder (no database):
+We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database):
 
 - ids: derive it from the field "name":
   - convert each word to first character uppercase
