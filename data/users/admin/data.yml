@@ -1,0 +1,18 @@
+id: admin
+type: person
+email: admin@example.com
+password: $2y$10$1qAz2wSx3eDc4rFv5tGb5ekSQTHG1S6UxrVSUcslnmTsv/FEPvsl6  # hashed "superadmin"
+name: Admin
+bio: System administrator for MarsBase.One
+expertise: Mars colony administration, system management
+image: 
+location: Mars Base One HQ
+
+memberIds: []
+followedItemIds: []
+followedReqIds: []
+followedUserIds: []
+itemScores: []
+reqScores: []
+
+modifiedAt: 2025-06-25 21:32:00

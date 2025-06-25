@@ -1,0 +1,27 @@
+app_name: "MarsBase.One"
+app_description: "Building the future on Mars, one requirement at a time"
+app_version: "1.0.0"
+
+# Default sort order for requirements
+requirement_sort_order:
+  - "score"  # Primary sort by user score
+  - "modifiedAt"  # Secondary sort by modification date (newest first)
+
+# File paths
+data_path: "data"
+users_path: "data/users"
+requirements_path: "data/requirements"
+solutions_path: "data/solutions"
+
+# Session settings
+session_lifetime: 86400  # 24 hours in seconds
+
+# Upload settings
+max_upload_size: 5242880  # 5MB in bytes
+allowed_image_types:
+  - "image/jpeg"
+  - "image/png"
+  - "image/gif"
+
+# Lock timeout in seconds
+file_lock_timeout: 30
