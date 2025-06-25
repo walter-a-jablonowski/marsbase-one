@@ -1,5 +1,5 @@
 
-I am thinking about making a web project that helps Elon to build his Mars Colony. Elon already is buillding a big rocket, which is the most important thing. But to be able to build a second (sustainable) civilation on Mars the mars colonists need much more stuff.
+I am thinking about making a web project that helps Elon to build his Mars Colony. Elon already is building a big rocket, which is the most important thing. But to be able to build a second (sustainable) civilization on Mars the mars colonists need much more stuff.
 
 I'd like to make a full features web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add solutions ("items") that fulfill the requirement.
 
