@@ -13,7 +13,7 @@ Pages:
 - Register
 - Requirements
   - requirements start page: Main list of base requirement (use cards)
-    - main requirement list initially is sorted by a sort order defned in config
+    - main requirement list initially is sorted by a sort order defned in config (add one)
     - each entry (choose a nice layout):
       - Up down arrow for user score, each user has one vote (users may change their choice)
       - show the most important data fields for the requirement
@@ -29,11 +29,11 @@ Pages:
       - list on each tab initially sorted by user score descending
       - first tab: "Sub Requirements"
         - basic filter and sorting controls
-        - suggest solution button
+        - suggest solution button (for edit use modal)
         - list of sub requirements
       - second tab: "Solutions" (the items)
         - basic filter and sorting controls
-        - suggest solution button
+        - suggest solution button (for edit use modal)
         - list of items
 - People: show your expertise for mars
   - basic filter and sorting controls, including show people or organisation only and filter by location
@@ -48,7 +48,7 @@ Pages:
 - Settings (currently empty)
 - Logout
 
-All users can view all requirements and solutions without login. Only logged in users can edit.
+All users can view all requirements and solutions without login. Only logged in users can edit (see user ids defined in the data).
 
 Items of type "project" (community projects) may ask for funding, which we implement as a dummy UI for now. We will add a payment feature later.
 
@@ -56,9 +56,9 @@ Make the web app full features including login system and basic error display in
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
-We use speaking File names for all files in data folders, e.g. for users:
+We use speaking File names for all files in data folders:
 
-- derive it from the field "name"
+- derive it from the field "name" (for users: name and location)
 - convert each word to first character uppercase
 - then remove all non alpha numeric chars
 - add a short random string to the end
@@ -67,9 +67,11 @@ Data files:
 
 ```
 /data
+  sequences.json
   /users
 
-    id:                   numeric (use a json file sequence.json that has the last used ids)
+    ```
+    id:                   numeric (use a json file sequences.json that has the last used ids)
     type:                 "person" or "organization"
     email:                email (unique)
     password:             Hashed password
@@ -87,50 +89,65 @@ Data files:
     reqScore:             Array of requirements up- or downvoted
 
     modifiedAt:           YYYY-MM-DD HH:MM:SS
+    ```
 
   /requirements (hierarchical)
+    /SomeRequirement_RND_STRING
+      /uploads
+      /requirements = sub requirements
 
-    id                    numeric
-    childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
-    relatedIds:           Array of related requirement IDs (e.g. dependencies)
-    userIds:              Array of user IDs that may edit this requirement
-    name
-    status:               "proposed", "validated"
-    description:          Short description
-    detailed:             Longer explanation
-    primaryImage:         uploaded file (gets some hash as name on upload)
-    images:               Array of image hashes
+      data.yml:
 
-    itemIDs:              Array of item IDs that fulfill this requirement
+        ```
+        id                    numeric
+        parentIds
+        childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
+        relatedIds:           Array of related requirement IDs (e.g. dependencies)
+        userIds:              Array of user IDs that may edit this requirement
+        name
+        status:               "proposed", "validated"
+        description:          Short description
+        detailed:             Longer explanation
+        primaryImage:         uploaded file (gets some hash as name on upload)
+        images:               Array of image hashes
 
-    score:                Calculated from up/downvotes
+        itemIds:              Array of item IDs that fulfill this requirement
 
-    createdBy:            User ID of creator
-    modifiedAt:           YYYY-MM-DD HH:MM:SS
+        score:                Calculated from up/downvotes
 
-  /items (only the creator may edit an item)
+        createdBy:            User ID of creator
+        modifiedAt:           YYYY-MM-DD HH:MM:SS
+        ```
 
-    id                   numeric
-    type:                "item", "service" or "project"
-    requirementIds:      Array of requirement IDs that this item fulfills
-    name
-    description:         Short description
-    projectLead:         User ID of project lead
-    availabilityDate:    Expected availability (percentage or specific date)
-    primaryImage:        uploaded file (gets some hash as name on upload)
-    images:              Array of image hashes
+      /solutions (only the creator may edit a solution item)
+        /SomeSolution_RND_STRING
+          /uploads
 
-    score:               Calculated from up/downvotes
+          data.yml:
 
-    mass:                Mass in kg
-    volume:              Volume in cubic meters
-    shape
+          ```
+          id                   numeric
+          type:                "item", "service" or "project"
+          requirementIds:      Array of requirement IDs that this item fulfills
+          name
+          description:         Short description
+          projectLead:         User ID of project lead
+          availabilityDate:    Expected availability (percentage or specific date)
+          primaryImage:        uploaded file (gets some hash as name on upload)
+          images:              Array of image hashes
 
-    fundingGoal:         Amount of funding needed
-    contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
-    currentFunding:      Calculated from contributions
-    volunteerRoles:      Types of volunteers needed
+          score:               Calculated from up/downvotes
 
-    createdBy:           User ID of creator
-    modifiedAt:          YYYY-MM-DD HH:MM:SS
+          mass:                Mass in kg
+          volume:              Volume in cubic meters
+          shape
+
+          fundingGoal:         Amount of funding needed
+          contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
+          currentFunding:      Calculated from contributions
+          volunteerRoles:      Types of volunteers needed
+
+          createdBy:           User ID of creator
+          modifiedAt:          YYYY-MM-DD HH:MM:SS
+          ```
 ```
