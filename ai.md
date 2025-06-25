@@ -56,6 +56,13 @@ Make the web app full features including login system and basic error display in
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
+Some folder names to use:
+
+```
+/pages      
+/lib       Functions and classes
+```
+
 Data files:
 
 ```
