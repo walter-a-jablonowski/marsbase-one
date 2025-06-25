@@ -120,7 +120,7 @@ Data files:
 
         itemIds:              Array of item IDs that fulfill this requirement
 
-        score:                Calculated from up/downvotes
+        # score must be calculated from up/downvotes (cause of possible problems in a multi user system)
 
         createdBy:            User ID of creator
         modifiedAt:           YYYY-MM-DD HH:MM:SS
@@ -132,29 +132,29 @@ Data files:
 
       data.yml:
 
-      ```
-      id                   numeric
-      type:                "item", "service" or "project"
-      requirementIds:      Array of requirement IDs that this item fulfills
-      name
-      description:         Short description
-      projectLead:         User ID of project lead
-      availabilityDate:    Expected availability (percentage or specific date)
-      primaryImage:        uploaded file (gets some hash as name on upload)
-      images:              Array of image hashes
+        ```
+        id                   numeric
+        type:                "item", "service" or "project"
+        requirementIds:      Array of requirement IDs that this item fulfills
+        name
+        description:         Short description
+        projectLead:         User ID of project lead
+        availabilityDate:    Expected availability (percentage or specific date)
+        primaryImage:        uploaded file (gets some hash as name on upload)
+        images:              Array of image hashes
 
-      score:               Calculated from up/downvotes
+        # score must be calculated from up/downvotes (cause of possible problems in a multi user system)
 
-      mass:                Mass in kg
-      volume:              Volume in cubic meters
-      shape
+        mass:                Mass in kg
+        volume:              Volume in cubic meters
+        shape
 
-      fundingGoal:         Amount of funding needed
-      contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
-      currentFunding:      Calculated from contributions
-      volunteerRoles:      Types of volunteers needed
+        fundingGoal:         Amount of funding needed
+        contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
+        # funding must be calculated (cause of possible problems in a multi user system)
+        volunteerRoles:      Types of volunteers needed
 
-      createdBy:           User ID of creator
-      modifiedAt:          YYYY-MM-DD HH:MM:SS
-      ```
+        createdBy:           User ID of creator
+        modifiedAt:          YYYY-MM-DD HH:MM:SS
+        ```
 ```
