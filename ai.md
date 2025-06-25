@@ -157,4 +157,4 @@ Data files:
 
 Implement some file locking mechanism to prevent concurrent access to the same file.
 
-Also add an initial user in /data "Admin" with mail admin@example.com and password "superadmin"
+Also add an initial user in /data/users "Admin" with mail admin@example.com and password "superadmin"
