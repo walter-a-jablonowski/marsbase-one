@@ -92,8 +92,8 @@ Data files:
 
     id                    numeric
     childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
-    relatedIDs:           Array of related requirement IDs (e.g. dependencies)
-    userIDs:              Array of user IDs that may edit this requirement
+    relatedIds:           Array of related requirement IDs (e.g. dependencies)
+    userIds:              Array of user IDs that may edit this requirement
     name
     status:               "proposed", "validated"
     description:          Short description
