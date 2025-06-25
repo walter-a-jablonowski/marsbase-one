@@ -1,7 +1,7 @@
 
 I am thinking about making a web project that helps Elon to build his Mars Colony. Elon already is building a big rocket, which is the most important thing. But to be able to build a second (sustainable) civilization on Mars the mars colonists need much more stuff.
 
-I'd like to make a full features web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add solutions ("items") that fulfill the requirement.
+I'd like to make a full-featured web app that is requirement based. In a hierarchical navigation users can suggest requirements for items required for building the base on mars. Then users can add solutions ("items") that fulfill the requirement.
 
 Pages:
 
@@ -41,7 +41,7 @@ Pages:
   - list of organisations and people (mixed)
     - show the most important data fields for the person
     - include show user profile page
-- we use no seperate items page
+- we use no separete items page
 - Profile (user personal profile page)
   - persons may be part of one or more organisations
   - followed/favorite requirements, items and users
@@ -56,7 +56,7 @@ Make the web app full features including login system and basic error display in
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
-We use speacking File names for all files in data folders, e.g. for users:
+We use speaking File names for all files in data folders, e.g. for users:
 
 - derive it from the field "name"
 - convert each word to first character uppercase
@@ -77,7 +77,7 @@ Data files:
     bio:                  Short biography or description
     expertise:            Areas of expertise/skills
     image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
-    location:             
+    location:             Physical location (Earth city/country or Mars base)
 
     memberIds:            if person: array of org ids, if org: array member ids
     followedItems:        Array of item IDs
