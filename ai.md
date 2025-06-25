@@ -12,8 +12,8 @@ Pages:
 - Login
 - Register
 - Requirements
-  - requirements start page: Main list of base requirement (use cards)
-    - main requirement list initially is sorted by a sort order defined in config (add one)
+  - requirements start page: list requirements (use cards)
+    - list on each tab initially sorted by user score descending, then by name
     - each entry (choose a nice layout):
       - Up down arrow for user score, each user has one vote (users may change their choice)
       - show the most important data fields for the requirement
@@ -26,11 +26,11 @@ Pages:
     - all information of this requirement (read only)
     - buttons for all functions, for edit use modal
     - tab control:
-      - list on each tab initially sorted by user score descending
+      - list on each tab initially sorted by user score descending, then by name
       - first tab: "Sub Requirements"
         - basic filter and sorting controls
         - suggest solution button (for edit use modal)
-        - list of sub requirements
+        - list of requirements (same as on requirements start page)
       - second tab: "Solutions" (the items)
         - basic filter and sorting controls
         - suggest solution button (for edit use modal)
