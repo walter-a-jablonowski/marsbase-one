@@ -56,14 +56,6 @@ Make the web app full features including login system and basic error display in
 
 We use config.yml, simple PHP code with simple classes and put all data in the /data folder (no database).
 
-We use speaking File names for all files in data folders:
-
-- derive it from the field "name" (for users: name and location)
-- each fields:
-  - convert each word to first character uppercase
-  - then remove all non alpha numeric chars
-- concat fields with underscore and add a short unique string to the end (with underscore)
-
 Data files:
 
 ```
@@ -78,29 +70,31 @@ Data files:
     ```
   /users
 
-    ```
-    id:                   numeric (use a json file sequences.json that has the last used ids)
-    type:                 "person" or "organization"
-    email:                email (unique)
-    password:             Hashed password
-    name:                 Full name or organization name
-    bio:                  Short biography or description
-    expertise:            Areas of expertise/skills
-    image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
-    location:             Physical location (Earth city/country or Mars base)
+    SOME_USER_ID.yml:
 
-    memberIds:            if person: array of org ids, if org: array member ids
-    followedItemIds:      Array of item IDs
-    followedReqIds:       Array of requirement IDs
-    followedUserIds:      Array of user IDs
-    itemScores:           Array of items up- or downvoted like [{itemId: ID, score: 1|-1}, ...]
-    reqScores:            Array of requirements up- or downvoted like [{reqId: ID, score: 1|-1}, ...]
+      ```
+      id:                   numeric (use a json file sequences.json that has the last used ids)
+      type:                 "person" or "organization"
+      email:                email (unique)
+      password:             Hashed password
+      name:                 Full name or organization name
+      bio:                  Short biography or description
+      expertise:            Areas of expertise/skills
+      image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
+      location:             Physical location (Earth city/country or Mars base)
 
-    modifiedAt:           YYYY-MM-DD HH:MM:SS
-    ```
+      memberIds:            if person: array of org ids, if org: array member ids
+      followedItemIds:      Array of item IDs
+      followedReqIds:       Array of requirement IDs
+      followedUserIds:      Array of user IDs
+      itemScores:           Array of items up- or downvoted like [{itemId: ID, score: 1|-1}, ...]
+      reqScores:            Array of requirements up- or downvoted like [{reqId: ID, score: 1|-1}, ...]
+
+      modifiedAt:           YYYY-MM-DD HH:MM:SS
+      ```
 
   /requirements
-    /SomeRequirement_RND_STRING
+    /SOME_REQUIREMENT_ID
       /uploads
 
       data.yml:
@@ -127,7 +121,7 @@ Data files:
         ```
 
   /solutions (only the creator may edit a solution item)
-    /SomeSolution_RND_STRING
+    /SOME_SOLUTION_ID
       /uploads
 
       data.yml:
