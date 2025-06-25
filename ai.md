@@ -144,3 +144,5 @@ Data files:
         modifiedAt:          YYYY-MM-DD HH:MM:SS
         ```
 ```
+
+Implement some file locking mechanism to prevent concurrent access to the same file.
