@@ -90,11 +90,11 @@ Data files:
     location:             Physical location (Earth city/country or Mars base)
 
     memberIds:            if person: array of org ids, if org: array member ids
-    followedItems:        Array of item IDs
-    followedReq:          Array of requirement IDs
-    followedUsers:        Array of user IDs
-    itemScore:            Array of items up- or downvoted like [{id: ID, score: 1|-1}, ...]
-    reqScore:             Array of requirements up- or downvoted
+    followedItemIds:      Array of item IDs
+    followedReqIds:       Array of requirement IDs
+    followedUserIds:      Array of user IDs
+    itemScores:           Array of items up- or downvoted like [{itemId: ID, score: 1|-1}, ...]
+    reqScores:            Array of requirements up- or downvoted like [{reqId: ID, score: 1|-1}, ...]
 
     modifiedAt:           YYYY-MM-DD HH:MM:SS
     ```
@@ -107,8 +107,8 @@ Data files:
 
         ```
         id                    numeric
-        parentIds
-        childIds:             IDs of child requirements (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
+        parentIds:            Array of requirement IDs that this requirement is a child of
+        childIds:             Array of child requirement IDs (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
         relatedIds:           Array of related requirement IDs (e.g. dependencies)
         userIds:              Array of user IDs that may edit this requirement
         name
@@ -150,7 +150,7 @@ Data files:
         shape
 
         fundingGoal:         Amount of funding needed
-        contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
+        contributions:       Array of users who contribute like [{userId: USER_ID, timestamp: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
         # funding must be calculated (cause of possible problems in a multi user system)
         volunteerRoles:      Types of volunteers needed
 
