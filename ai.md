@@ -103,7 +103,6 @@ Data files:
 
         ```
         id                    short unique id
-        parentIds:            Array of requirement IDs that this requirement is a child of
         childIds:             Array of child requirement IDs (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
         relatedIds:           Array of related requirement IDs (e.g. dependencies)
         userIds:              Array of user IDs that may edit this requirement
@@ -131,7 +130,6 @@ Data files:
         ```
         id                   short unique id
         type:                "item", "service" or "project"
-        requirementIds:      Array of requirement IDs that this item fulfills
         name
         description:         Short description
         projectLeadId:       User ID of project lead
