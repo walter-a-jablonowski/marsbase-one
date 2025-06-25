@@ -12,10 +12,13 @@ Pages:
 - Login
 - Register
 - Requirements
-  - requirements stat page: Main list of base requirement (use cards), each entry:
-    - show the most important requirement information (including image)
-    - buttons for all functions
-    - choose a nice layout
+  - requirements start page: Main list of base requirement (use cards)
+    - main requirement list initially is sorted by a sort order defned in config
+    - each entry (choose a nice layout):
+      - Up down arrow for user score, each user has one vote (users may change their choice)
+      - show the most important data fields for the requirement
+      - image (on the right side)
+      - buttons for all functions
   - click on an requirement to navigate to the requirement page
   - requirement page:
     - breadcrumb
@@ -23,6 +26,7 @@ Pages:
     - all information of this requirement (read only)
     - buttons for all functions, for edit use modal
     - tab control:
+      - list on each tab initially sorted by user score descending
       - first tab: "Sub Requirements"
         - basic filter and sorting controls
         - suggest solution button
@@ -32,20 +36,21 @@ Pages:
         - suggest solution button
         - list of items
 - People: show your expertise for mars
-  - basic filter and sorting controls, including show people or organisation only
+  - basic filter and sorting controls, including show people or organisation only and filter by location
+    - add criteria that make sense
   - list of organisations and people (mixed)
+    - show the most important data fields for the person
+    - include show user profile page
 - we use no seperate items page
-- Profile
+- Profile (user personal profile page)
+  - persons may be part of one or more organisations
+  - followed/favorite requirements, items and users
 - Settings (currently empty)
 - Logout
 
-For the requirements as well as the items users can Up- or downvode (users may change their choice) which is used for initial sorting.
+All users can view all requirements and solutions without login. Only logged in users can edit.
 
-Items might be community projects (item type "project") and ask for funding, which we implement as a dummy UI for now. We will add a payment feature later.
-
-Users can be persons or organizations. Persons may be part of an Organisation. Users have a personal profile page and they can:
-
-- Follow/favorite requirements, items and users
+Items of type "project" (community projects) may ask for funding, which we implement as a dummy UI for now. We will add a payment feature later.
 
 Make the web app full features including login system and basic error display in case of app errors. Make it based on bootstrap 5.3 but alter the design using styles so that it matches "mars colony" theme of the app. Make the UI responsive and work on all devices.
 
