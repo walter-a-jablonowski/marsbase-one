@@ -73,7 +73,7 @@ Data files:
       bio:                  Short biography or description
       expertise:            Areas of expertise/skills
       image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
-      location:             Physical location (Earth city/country or Mars base)
+      location:             Human-readable address for Earth locations (e.g., "1600 Amphitheatre Parkway, Mountain View, CA")
 
       memberIds:            if person: array of org ids, if org: array member ids
       followedItemIds:      Array of item IDs
