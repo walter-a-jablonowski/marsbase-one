@@ -148,7 +148,7 @@ Data files:
         fundingGoal:         Amount of funding needed
         contributions:       Array of users who contribute like [{userId: USER_ID, timestamp: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
         # funding must be calculated (cause of possible problems in a multi user system)
-        volunteerRoles:      Types of volunteers needed
+        volunteerRoles:      Types of volunteers needed (currently text)
 
         createdBy:           User ID of creator
         modifiedAt:          YYYY-MM-DD HH:MM:SS
