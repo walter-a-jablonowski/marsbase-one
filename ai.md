@@ -62,28 +62,31 @@ Data files:
 /data
   /users
 
-    SOME_USER_ID.yml:
+    /SOME_USER_ID
+      /uploads
+    
+      data.yml:
 
-      ```
-      id:                   short unique id (use some short unique identifier)
-      type:                 "person" or "organization"
-      email:                email (unique)
-      password:             Hashed password
-      name:                 Full name or organization name
-      bio:                  Short biography or description
-      expertise:            Areas of expertise/skills
-      image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
-      location:             Human-readable address for Earth locations (e.g., "1600 Amphitheatre Parkway, Mountain View, CA")
+        ```
+        id:                   short unique id (use some short unique identifier)
+        type:                 "person" or "organization"
+        email:                email (unique)
+        password:             Hashed password
+        name:                 Full name or organization name
+        bio:                  Short biography or description
+        expertise:            Areas of expertise/skills (text)
+        image:                uploaded file jpg, jpeg, png (gets some hash as file name on upload)
+        location:             Human-readable address for Earth locations (e.g., "1600 Amphitheatre Parkway, Mountain View, CA")
 
-      memberIds:            if person: array of org ids, if org: array member ids
-      followedItemIds:      Array of item IDs
-      followedReqIds:       Array of requirement IDs
-      followedUserIds:      Array of user IDs
-      itemScores:           Array of items up- or downvoted like [{itemId: ID, score: 1|-1}, ...]
-      reqScores:            Array of requirements up- or downvoted like [{reqId: ID, score: 1|-1}, ...]
+        memberIds:            if person: array of org ids, if org: array member ids
+        followedItemIds:      Array of item IDs
+        followedReqIds:       Array of requirement IDs
+        followedUserIds:      Array of user IDs
+        itemScores:           Array of items up- or downvoted like [{itemId: ID, score: 1|-1}, ...]
+        reqScores:            Array of requirements up- or downvoted like [{reqId: ID, score: 1|-1}, ...]
 
-      modifiedAt:           YYYY-MM-DD HH:MM:SS
-      ```
+        modifiedAt:           YYYY-MM-DD HH:MM:SS
+        ```
 
   /requirements
     /SOME_REQUIREMENT_ID
