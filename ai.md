@@ -60,20 +60,12 @@ Data files:
 
 ```
 /data
-  sequences.json
-    ```
-    {
-      "users": 1,
-      "requirements": 1,
-      "solutions": 1
-    }
-    ```
   /users
 
     SOME_USER_ID.yml:
 
       ```
-      id:                   numeric (use a json file sequences.json that has the last used ids)
+      id:                   short unique id (use some short unique identifier)
       type:                 "person" or "organization"
       email:                email (unique)
       password:             Hashed password
@@ -100,7 +92,7 @@ Data files:
       data.yml:
 
         ```
-        id                    numeric
+        id                    short unique id
         parentIds:            Array of requirement IDs that this requirement is a child of
         childIds:             Array of child requirement IDs (for hierarchy), requirements can have multiple parents (e.g. power supply needed for different things)
         relatedIds:           Array of related requirement IDs (e.g. dependencies)
@@ -127,7 +119,7 @@ Data files:
       data.yml:
 
         ```
-        id                   numeric
+        id                   short unique id
         type:                "item", "service" or "project"
         requirementIds:      Array of requirement IDs that this item fulfills
         name
