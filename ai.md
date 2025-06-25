@@ -13,7 +13,7 @@ Pages:
 - Register
 - Requirements
   - requirements start page: Main list of base requirement (use cards)
-    - main requirement list initially is sorted by a sort order defned in config (add one)
+    - main requirement list initially is sorted by a sort order defined in config (add one)
     - each entry (choose a nice layout):
       - Up down arrow for user score, each user has one vote (users may change their choice)
       - show the most important data fields for the requirement
@@ -61,13 +61,20 @@ We use speaking File names for all files in data folders:
 - derive it from the field "name" (for users: name and location)
 - convert each word to first character uppercase
 - then remove all non alpha numeric chars
-- add a short random string to the end
+- add a unique random string to the end
 
 Data files:
 
 ```
 /data
   sequences.json
+    ```
+    {
+      "users": 1,
+      "requirements": 1,
+      "solutions": 1
+    }
+    ```
   /users
 
     ```
