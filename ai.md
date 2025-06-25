@@ -59,9 +59,10 @@ We use config.yml, simple PHP code with simple classes and put all data in the /
 We use speaking File names for all files in data folders:
 
 - derive it from the field "name" (for users: name and location)
-- convert each word to first character uppercase
-- then remove all non alpha numeric chars
-- add a unique random string to the end
+- each fields:
+  - convert each word to first character uppercase
+  - then remove all non alpha numeric chars
+- concat fields with underscore and add a short unique string to the end (with underscore)
 
 Data files:
 
