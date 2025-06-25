@@ -98,10 +98,9 @@ Data files:
     modifiedAt:           YYYY-MM-DD HH:MM:SS
     ```
 
-  /requirements (hierarchical)
+  /requirements
     /SomeRequirement_RND_STRING
       /uploads
-      /requirements = sub requirements
 
       data.yml:
 
@@ -126,35 +125,35 @@ Data files:
         modifiedAt:           YYYY-MM-DD HH:MM:SS
         ```
 
-      /solutions (only the creator may edit a solution item)
-        /SomeSolution_RND_STRING
-          /uploads
+  /solutions (only the creator may edit a solution item)
+    /SomeSolution_RND_STRING
+      /uploads
 
-          data.yml:
+      data.yml:
 
-          ```
-          id                   numeric
-          type:                "item", "service" or "project"
-          requirementIds:      Array of requirement IDs that this item fulfills
-          name
-          description:         Short description
-          projectLead:         User ID of project lead
-          availabilityDate:    Expected availability (percentage or specific date)
-          primaryImage:        uploaded file (gets some hash as name on upload)
-          images:              Array of image hashes
+      ```
+      id                   numeric
+      type:                "item", "service" or "project"
+      requirementIds:      Array of requirement IDs that this item fulfills
+      name
+      description:         Short description
+      projectLead:         User ID of project lead
+      availabilityDate:    Expected availability (percentage or specific date)
+      primaryImage:        uploaded file (gets some hash as name on upload)
+      images:              Array of image hashes
 
-          score:               Calculated from up/downvotes
+      score:               Calculated from up/downvotes
 
-          mass:                Mass in kg
-          volume:              Volume in cubic meters
-          shape
+      mass:                Mass in kg
+      volume:              Volume in cubic meters
+      shape
 
-          fundingGoal:         Amount of funding needed
-          contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
-          currentFunding:      Calculated from contributions
-          volunteerRoles:      Types of volunteers needed
+      fundingGoal:         Amount of funding needed
+      contributions:       Array of user who contribute like [{user: USER_ID, time: YYYY-MM-DD HH:MM:SS, amount: AMOUNT}, ...]
+      currentFunding:      Calculated from contributions
+      volunteerRoles:      Types of volunteers needed
 
-          createdBy:           User ID of creator
-          modifiedAt:          YYYY-MM-DD HH:MM:SS
-          ```
+      createdBy:           User ID of creator
+      modifiedAt:          YYYY-MM-DD HH:MM:SS
+      ```
 ```
